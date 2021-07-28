@@ -1,0 +1,50 @@
+footer{
+  font-family: 'Staatliches', cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color:#FFFFFF;
+  background-color: #444444;
+  text-align:center;
+}
+
+form{
+  text-align:left;
+}
+
+.container{
+  font-family: 'Staatliches', cursive;
+}
+
+.nav-link{
+  font-size:1.2rem;
+}
+
+.pictures-content{
+  font-family: 'Anton', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color:#FF8585;
+}
+
+.footer-img{
+  color:#FFFFFF
+}
+
+.container{
+  margin-top: 100px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+.form-text{
+  font-size: 1.5rem;
+}
+
+.card-img{
+  height: 250px;
+  width: 500px;
+}
+
+#pictures{
+  text-align:center;
+}

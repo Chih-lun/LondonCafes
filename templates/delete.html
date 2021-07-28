@@ -1,0 +1,10 @@
+{% include "header.html" %}
+<div class="container" style="padding-top:150px; padding-bottom:150px;">
+    <div class="col-md-12 mt-12">
+        <h1>Are you sure to delete this cafe?</h1>
+        <a href="{{ url_for('delete_confirm',id=id) }}"><button type="button" class="btn btn-danger" style="margin:50px 10px;">Confirm</button></a>
+        <a href="{{ url_for('cafes') }}"><button type="button" class="btn btn-danger" style="margin:50px 10px;">Cancel</button></a>
+    </div>
+</div>
+
+{% include "footer.html" %}

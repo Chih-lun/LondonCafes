@@ -1,0 +1,9 @@
+{% include "header.html" %}
+<!-- forms -->
+        <div class="container">
+          <h1 class="cotainer-title">Add Cafe</h1>
+            {% import 'bootstrap/wtf.html' as wtf %}
+          {{ wtf.quick_form(form=form,novalidate=True,button_map={'submit': 'primary'}) }}
+        </div>
+
+{% include "footer.html" %}

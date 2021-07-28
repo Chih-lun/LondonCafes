@@ -1,0 +1,48 @@
+{% include "header.html" %}
+
+<!-- cafes -->
+<div class="container d-flex justify-content-center mt-50 mb-50">
+  <div class="row">
+    <div class="col-md-12 mt-12">
+      <h1>Cafes</h1>
+    </div>
+    {% for cafe in cafes %}
+    <div class="col-md-4 mt-2">
+      <div class="card" style="margin:10px;">
+        <div class="card-body">
+          <div class="card-img-actions"> <img src="{{ cafe.img_url }}" class="card-img img-fluid" width="96" height="350" alt="" style="height: 250px; width: 500px;"> </div>
+        </div>
+        <div class="card-body bg-light text-center">
+          <div class="mb-2">
+            <h5 class="font-weight-semibold mb-2">{{ cafe.name }}</h5>
+            <h4 class="font-weight-semibold mb-2">{{ cafe.location }}</h4>
+            <a href="{{ cafe.map_url }}" class="text-muted" data-abc="true">Google Maps</a>
+
+          </div>
+          <h4 class="mb-0 font-weight-semibold"><i class="fas fa-coffee"></i> {{ cafe.coffee_price }}</h4>
+          <h4 class="mb-0 font-weight-semibold"><i class="fas fa-chair"></i> {{ cafe.seats }}</h4>
+          <h4 class="card-facilities">
+            {% if cafe.has_sockets %}
+            <i class="fas fa-plug"></i>
+            {% endif %}
+            {% if cafe.has_toilet %}
+            <i class="fas fa-toilet"></i>
+            {% endif %}
+            {% if cafe.has_wifi %}
+            <i class="fas fa-wifi"></i>
+            {% endif %}
+            {% if cafe.can_take_calls %}
+            <i class="fas fa-phone"></i>
+            {% endif %}
+          </h4>
+          <div>
+            <a href="{{ url_for('delete',id=cafe.id) }}"><button type="button" class="btn btn-danger btn-delete">Delete</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include "footer.html" %}
