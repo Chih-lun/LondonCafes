@@ -6,7 +6,7 @@ sqlite_connection = sqlite3.connect('cafes.db')
 sqlite_cursor = sqlite_connection.cursor()
 
 #postgresql connect
-postgresql_conn = psycopg2.connect(database="d5ige2q6li0rfd", user="krsnfxdhjwelxg", password="0e40d205537d91ed6d9d8d563cbbc573b0c41b59cc55874ecf32753b999b674c", host="ec2-23-20-124-77.compute-1.amazonaws.com", port="5432")
+postgresql_conn = psycopg2.connect(database="database", user="user", password="password", host="host", port="port")
 postgresql_cursor = postgresql_conn.cursor()
 
 data = sqlite_cursor.execute('SELECT * FROM cafe')
